@@ -1,0 +1,28 @@
+{
+  "name": "single-spa-template",
+  "version": "1.0.0",
+  "description": "a single-spa demo with use single-spa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode=development --port=8081",
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack --mode=production"
+  },
+  "dependencies": {
+    "single-spa": "^5.5.5",
+    "systemjs-webpack-interop": "^2.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "rimraf": "^3.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "author": "hanzhiwan",
+  "license": "ISC"
+}

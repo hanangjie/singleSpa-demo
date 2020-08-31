@@ -1,7 +1,6 @@
 const {
   CleanWebpackPlugin
 } = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -9,30 +8,25 @@ module.exports = {
     path: __dirname + "/dist",
     libraryTarget: "system",
     filename: "[name].js",
-    jsonpFunction: `webpackJsonp_people`,
+    jsonpFunction: `webpackJsonp_demo`,
   },
-  externals: ["single-spa", /^@react-sp\/.+$/],
+  externals: ["single-spa"],
   module: {
     rules: [{
       test: /\.js$/,
       exclude: /node_modules/,
       use: [{
-        loader: "babel-loader"
-      }],
+        loader: "babel-loader",
+      }, ],
     }, ],
   },
   devServer: {
-    historyApiFallback: true,
     disableHostCheck: true,
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
+    compress: true,
     https: true,
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "src/index.ejs",
-    }),
-    new CleanWebpackPlugin(),
-  ],
+  plugins: [new CleanWebpackPlugin()],
 };
