@@ -9,10 +9,6 @@
     "clean": "rimraf dist",
     "build": "npm run clean && webpack --mode=production"
   },
-  "dependencies": {
-    "single-spa": "^5.5.5",
-    "systemjs-webpack-interop": "^2.1.2"
-  },
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
