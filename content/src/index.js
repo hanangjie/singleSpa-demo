@@ -14,7 +14,7 @@ export function mount(props) {
     .resolve()
     .then(() => {
       // 在这里通常使用框架将ui组件挂载到dom。请参阅https://single-spa.js.org/docs/ecosystem.html。
-      domEl.textContent = 'App is mounted!2asdassssd'
+      domEl.textContent = 'App is mounted!'
     });
 }
 export function unmount(props) {
